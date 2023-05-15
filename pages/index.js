@@ -10,12 +10,13 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   const { data: session } = useSession()
+
   async function handleGoogleSignIn() {
     signIn('google', { callbackUrl: 'http://localhost:3000' })
   }
-  async function handleGoogleSignOut() {
-    signOut()
-  }
+  // async function handleGoogleSignOut() {
+  //   signOut()
+  // }
 
   return (
     <div className="container">
